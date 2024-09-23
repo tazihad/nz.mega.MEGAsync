@@ -1,0 +1,12 @@
+set(VCPKG_POLICY_EMPTY_PACKAGE enabled)
+if (NOT VCPKG_BUILD_TYPE OR VCPKG_BUILD_TYPE STREQUAL "release")
+    set(BZIP2_PREFIX "${CURRENT_INSTALLED_DIR}")
+    set(bzname bz2)
+    configure_file("${CMAKE_CURRENT_LIST_DIR}/bzip2.pc.in" "${CURRENT_PACKAGES_DIR}/lib/pkgconfig/bzip2.pc" @ONLY)
+endif()
+
+if (NOT VCPKG_BUILD_TYPE OR VCPKG_BUILD_TYPE STREQUAL "debug")
+    set(BZIP2_PREFIX "${CURRENT_INSTALLED_DIR}/debug")
+    set(bzname bz2d)
+    configure_file("${CMAKE_CURRENT_LIST_DIR}/bzip2.pc.in" "${CURRENT_PACKAGES_DIR}/debug/lib/pkgconfig/bzip2.pc" @ONLY)
+endif()

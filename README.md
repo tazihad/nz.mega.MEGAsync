@@ -35,17 +35,5 @@ flatpak uninstall nz.mega.MEGAsync
 ```
 git clone https://github.com/flathub/nz.mega.MEGAsync.git
 cd nz.mega.MEGAsync
-mkdir binary-cache
+flatpak-builder --install --user --keep-build-dirs --ccache build nz.mega.MEGAsync.yml
 ```
-
-Then edit nz.mega.MEGAsync.yml and uncomment the binary-cache module source at the end of the manifest.
-
-If you already have a vcpkg binary cache, you may copy it to binary-cache folder.
-
-If this is an initial build, run the following command:
-
-```
-flatpak-builder --install --user --keep-build-dirs build nz.mega.MEGAsync.yml
-```
-
-Once a successful build was done, copy the folder `.flatpak-builder/build/MEGAsync/binary-cache` and paste it in the directory where nz.mega.MEGAsync.yml is. The next build will be faster because the vcpkg dependencies are already compiled and cached.
