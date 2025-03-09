@@ -2,7 +2,7 @@ name: Build Flatpak
 on:
   push:
     branches:
-      - main
+      - master
   pull_request:
 
 jobs:
