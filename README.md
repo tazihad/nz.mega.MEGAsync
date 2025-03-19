@@ -18,7 +18,7 @@ flatpak install nz.mega.MEGAsync
 3. Extract the zip file to access the Flatpak package.
 4. Install the Flatpak package using the following command:
 ```
-   flatpak install 'file'
+flatpak install 'file'
 ```
 
 ## Launch the desktop app
