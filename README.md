@@ -17,9 +17,9 @@ flatpak install nz.mega.MEGAsync
 2. In the workflow summary, download the artifact. The artifact will contain a zip file with the Flatpak package.
 3. Extract the zip file to access the Flatpak package.
 4. Install the Flatpak package using the following command:
-   ```
+```
    flatpak install 'file'
-   ```
+```
 
 ## Launch the desktop app
 
