@@ -1,6 +1,6 @@
 # nz.mega.MEGAsync
 MEGAsync Desktop App packaged as flatpak. 
-Build Repository.
+Build Repository. 
 
 ## Installation
 
