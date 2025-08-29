@@ -22,3 +22,19 @@ jobs:
           bundle: megasync.flatpak
           cache-key: flatpak-builder-${{ github.sha }}
           upload-artifact: true
+
+      - name: Extract flatpak from zip
+        run: |
+          unzip megasync-x86_64.flatpak.zip
+          ls -lh
+
+      - name: Upload Release
+        if: github.ref == 'refs/heads/master'
+        uses: softprops/action-gh-release@v2
+        with:
+          files: megasync.flatpak
+          tag_name: latest
+          name: "Latest Build"
+          prerelease: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
