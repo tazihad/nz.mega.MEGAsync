@@ -1,7 +1,7 @@
 id: nz.mega.MEGAsync
 sdk: org.kde.Sdk
 runtime: org.kde.Platform
-runtime-version: 5.15-24.08
+runtime-version: 5.15-23.08
 finish-args:
   - --device=dri
   - --filesystem=~/.config/autostart:create
@@ -413,3 +413,4 @@ modules:
           # Fix Autostart issue in Flatpak
           - ./sd -f m '/usr/share/applications/megasync.desktop' '/app/share/autostart/megasync.desktop' desktop/src/MEGASync/platform/linux/PlatformImplementation.cpp
           - ./sd -f m 'megasync.desktop' 'nz.mega.MEGAsync.desktop' desktop/src/MEGASync/platform/linux/PlatformImplementation.cpp
+
